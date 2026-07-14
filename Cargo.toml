@@ -1,0 +1,15 @@
+[package]
+name = "AdobeProcessMonitor"
+version = "0.1.1"
+edition = "2021"
+build = "build.rs"
+
+[dependencies]
+winapi = { version = "0.3", features = ["psapi", "handleapi", "processthreadsapi", "winnt", "winuser"] }
+systray = "0.4"
+
+[build-dependencies]
+embed-resource = "3.0"
+
+[profile.release]
+lto = true
